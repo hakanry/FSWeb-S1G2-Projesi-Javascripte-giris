@@ -140,7 +140,7 @@ Aşağdaki milDonusturucu fonksiyonunu aşağıdakileri kullanarak tamamla:
 */
 
 function milDonusturucu(kilometre) {
-  return (kilometre*0.621371192);
+  return (kilometre*0.621371);
 }
 console.log(milDonusturucu(3));
 
@@ -174,11 +174,14 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yap:
 */
 
 function cocukSarkisi(maymunSayisi) {
-  for(let i = maymunSayisi ; i>0; i--){
-      console.log(`${i} küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!`);
-    }
+    return `${maymunSayisi} küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!`;
+  }
+  
+for(let i = 5 ; i>1 ; i--){
+  console.log(cocukSarkisi(i));
 }
-cocukSarkisi(5);
+
+
 
 /* Görev 6 : Not Hesaplayıcı */
 
@@ -217,7 +220,7 @@ Aşağıdakileri sesliHarfSayaci fonskiyonunda yap.
 function sesliHarfSayaci(stringArg) {
   let sesliHarfler = ["a","e","ı","i","o","ö","u","ü","A","E","I","İ","O","Ö","U","Ü"];
   let sayac = 0;
-  for(i of stringArg){
+  for(let i of stringArg){
     if(sesliHarfler.includes(i)) sayac += 1;
   }
   return sayac;
